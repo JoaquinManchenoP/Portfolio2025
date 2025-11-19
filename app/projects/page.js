@@ -1,12 +1,12 @@
 import HeaderNav from "@/components/HeaderNav";
-import HeroSection from "@/components/sections/HeroSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import ProjectsHeroSection from "@/components/projects/ProjectsHeroSection";
+import ProjectListSection from "@/components/projects/ProjectListSection";
+import ProductsIntroSection from "@/components/projects/ProductsIntroSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import CtaSection from "@/components/sections/CtaSection";
-import FollowSection from "@/components/sections/FollowSection";
 import FooterSection from "@/components/sections/FooterSection";
 
-const projects = [
+const projectList = [
   {
     name: "Morva Labs",
     description: "Visual design, Branding",
@@ -24,6 +24,18 @@ const projects = [
     description: "Landing page, Illustration design",
     icon: "S",
     colors: "from-[#FF875E] via-[#FFB464] to-[#FFE989]",
+  },
+  {
+    name: "Glassdoor",
+    description: "Icon design, Illustration design",
+    icon: "G",
+    colors: "from-[#70D6FF] via-[#4FB0FF] to-[#2667FF]",
+  },
+  {
+    name: "Seven LTD.",
+    description: "Branding, Landing page",
+    icon: "7",
+    colors: "from-[#cda7ff] via-[#a485ff] to-[#7a5cf9]",
   },
 ];
 
@@ -54,46 +66,28 @@ const products = [
   },
 ];
 
-export default function Home() {
+export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-[#050505] py-10 px-4 text-white">
       <main className="mx-auto flex w-full max-w-xl flex-col gap-5 rounded-[40px] border border-white/5 bg-[#111315] p-5 font-sans shadow-[0_40px_120px_rgba(0,0,0,0.55)] sm:p-8">
         <HeaderNav className="-mx-1 sm:-mx-4" />
 
-        <HeroSection
-          label="Product Designer"
-          status="Available for work"
-          title="I'm Brian Do"
-          description="Product designer from Jakarta, ID. Currently designing at Rectangle."
-          primaryCta="Hire Me"
-          secondaryCta="Copy Email"
+        <ProjectsHeroSection
+          title="My Works"
+          description="Discover my portfolio, where purposeful interfaces meet captivating design. My work strives to enhance experiences and inspire."
         />
-
-        <ProjectsSection
-          title="Projects"
-          subtitle="Visual case studies"
-          actionLabel="View All"
-          items={projects}
+        <ProjectListSection items={projectList} />
+        <ProductsIntroSection
+          title="Explore My Products"
+          description="Some of the digital products that I worked on as side projects, check them out now."
         />
-
         <ProductsSection items={products} />
-
         <CtaSection
           title="Let's work together."
           description="Creating user experience and visually appealing design."
           primaryLabel="Hire Me"
           secondaryLabel="Copy Email"
         />
-
-        <FollowSection
-          socials={[
-            { label: "X", href: "#" },
-            { label: "Dribbble", href: "#" },
-            { label: "Instagram", href: "#" },
-            { label: "LinkedIn", href: "#" },
-          ]}
-        />
-
         <FooterSection />
       </main>
     </div>
