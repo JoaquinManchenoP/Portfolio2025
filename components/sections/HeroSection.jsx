@@ -35,8 +35,12 @@ export default function HeroSection({
         </div>
         <div className="flex items-center justify-center">
           <div className="h-28 w-28 rounded-full bg-gradient-to-b from-[#ffe9d0] to-[#f7bf7d] p-1 ring-4 ring-black/30 shadow-[0_25px_50px_rgba(0,0,0,0.45)]">
-            <div className="flex h-full w-full items-center justify-center rounded-full bg-[#fdf7ef] text-5xl transition-transform duration-500 group-hover:scale-110">
-              🧑🏻‍🎨
+            <div className="flex h-full w-full items-center justify-center rounded-full bg-[#fdf7ef] text-5xl transition-transform duration-500 group-hover:scale-110 overflow-hidden">
+              <img
+                src="/images/profile-image.png"
+                alt="Profile portrait"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

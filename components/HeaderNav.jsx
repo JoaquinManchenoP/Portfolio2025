@@ -79,7 +79,7 @@ export default function HeaderNav({ className = "" }) {
           type="button"
           className="flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white text-black/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/70 active:scale-95"
         >
-          Hire Me
+          Download CV
         </button>
       </div>
     </header>

@@ -39,17 +39,14 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[#050505] py-10 px-4 text-white">
       <main className="mx-auto flex w-full max-w-xl flex-col gap-5 rounded-[40px] border border-white/5 bg-[#111315] p-5 font-sans shadow-[0_40px_120px_rgba(0,0,0,0.55)] sm:p-8">
         <HeaderNav className="-mx-1 sm:-mx-4" />
-
         <AboutIntroSection
           title="It's Me Brian"
           description="I'm Brian Do, a product designer with over 5 years of experience, currently residing in Jakarta, Indonesia. I have a deep passion for crafting purposeful interfaces and products. My main goal is to bridge the divide between people and technology, transforming intricate challenges into meaningful and seamless experiences."
         />
-
         <AboutPortraitSection
-          imageSrc="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+          imageSrc="/images/about-image.jpg"
           alt="Portrait of Brian Do"
         />
-
         <AboutStorySection paragraphs={storyParagraphs} />
 
         <SideProjectsSection projects={sideProjects} />
