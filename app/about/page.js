@@ -4,7 +4,6 @@ import AboutPortraitSection from "@/components/about/AboutPortraitSection";
 import AboutStorySection from "@/components/about/AboutStorySection";
 import SideProjectsSection from "@/components/about/SideProjectsSection";
 import CtaSection from "@/components/sections/CtaSection";
-import FollowSection from "@/components/sections/FollowSection";
 import FooterSection from "@/components/sections/FooterSection";
 
 const sideProjects = [
@@ -25,13 +24,6 @@ const sideProjects = [
 const storyParagraphs = [
   "Brian Do holds a bachelor's degree in Graphic Design from a prestigious university in the United States and has a relentless drive for staying up-to-date with the latest technologies and design trends. Actively involved in the design community, Brian regularly participates in diverse design conferences and meetups.",
   "When he's not immersed in design work, he finds solace in playing the guitar and exploring new coffee shops in his local area. Brian firmly believes in maintaining a healthy work-life balance, making sure to take breaks and reenergize his creativity. In his spare time, he also volunteers at a local animal shelter on weekends.",
-];
-
-const socials = [
-  { label: "X", href: "#" },
-  { label: "Dribbble", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
 ];
 
 export default function AboutPage() {
@@ -57,9 +49,6 @@ export default function AboutPage() {
           primaryLabel="Hire Me"
           secondaryLabel="Copy Email"
         />
-
-        <FollowSection socials={socials} />
-
         <FooterSection />
       </main>
     </div>

@@ -28,15 +28,6 @@ const navActions = [
       </svg>
     ),
   },
-
-  {
-    label: "Settings",
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
-        <path d="M19.14 12.94a7.18 7.18 0 0 0 .06-.94 7.18 7.18 0 0 0-.06-.94l2.11-1.65a.46.46 0 0 0 .11-.58l-2-3.46a.45.45 0 0 0-.56-.2l-2.49 1a6.86 6.86 0 0 0-1.63-.94l-.38-2.65A.45.45 0 0 0 13.89 2h-3.78a.45.45 0 0 0-.45.38l-.38 2.65a6.86 6.86 0 0 0-1.63.94l-2.49-1a.45.45 0 0 0-.56.2l-2 3.46a.46.46 0 0 0 .11.58L4.86 11a7.18 7.18 0 0 0-.06.94 7.18 7.18 0 0 0 .06.94l-2.11 1.65a.46.46 0 0 0-.11.58l2 3.46a.45.45 0 0 0 .56.2l2.49-1a6.86 6.86 0 0 0 1.63.94l.38 2.65a.45.45 0 0 0 .45.38h3.78a.45.45 0 0 0 .45-.38l.38-2.65a6.86 6.86 0 0 0 1.63-.94l2.49 1a.45.45 0 0 0 .56-.2l2-3.46a.46.46 0 0 0-.11-.58Zm-7.14 2.31a3.25 3.25 0 1 1 3.25-3.25 3.25 3.25 0 0 1-3.25 3.25Z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function HeaderNav({ className = "" }) {
@@ -50,28 +41,32 @@ export default function HeaderNav({ className = "" }) {
             const sharedClass =
               "flex h-10 w-10 items-center justify-center rounded-2xl border border-white/5 bg-black/30 text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/60 active:scale-95";
 
-            if (action.href) {
-              return (
-                <Link
-                  key={action.label}
-                  href={action.href}
-                  aria-label={action.label}
-                  className={sharedClass}
-                >
-                  {action.icon}
-                </Link>
-              );
-            }
-
             return (
-              <button
+              <div
                 key={action.label}
-                className={sharedClass}
-                aria-label={action.label}
-                type="button"
+                className="group relative flex flex-col items-center"
               >
-                {action.icon}
-              </button>
+                {action.href ? (
+                  <Link
+                    href={action.href}
+                    aria-label={action.label}
+                    className={sharedClass}
+                  >
+                    {action.icon}
+                  </Link>
+                ) : (
+                  <button
+                    className={sharedClass}
+                    aria-label={action.label}
+                    type="button"
+                  >
+                    {action.icon}
+                  </button>
+                )}
+                <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-xl bg-black/80 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white opacity-0 shadow-lg shadow-black/40 transition-all duration-200 group-hover:-translate-y-1 group-hover:opacity-100">
+                  {action.label}
+                </span>
+              </div>
             );
           })}
         </div>
