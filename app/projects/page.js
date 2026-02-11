@@ -74,7 +74,7 @@ export default function ProjectsPage() {
 
         <ProjectsHeroSection
           title="My Works"
-          description="Discover my portfolio, where purposeful interfaces meet captivating design. My work strives to enhance experiences and inspire."
+          description="Take a look at my personal projects."
         />
         <ProjectListSection items={projectList} />
         <ProductsIntroSection

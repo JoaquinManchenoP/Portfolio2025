@@ -22,8 +22,8 @@ const sideProjects = [
 ];
 
 const storyParagraphs = [
-  "Brian Do holds a bachelor's degree in Graphic Design from a prestigious university in the United States and has a relentless drive for staying up-to-date with the latest technologies and design trends. Actively involved in the design community, Brian regularly participates in diverse design conferences and meetups.",
-  "When he's not immersed in design work, he finds solace in playing the guitar and exploring new coffee shops in his local area. Brian firmly believes in maintaining a healthy work-life balance, making sure to take breaks and reenergize his creativity. In his spare time, he also volunteers at a local animal shelter on weekends.",
+  "I’m Joaquin, a software developer with a long-standing interest in technology and how it can be used to build and create new things. I enjoy staying up to date with the latest trends and news in tech, and I’m always looking for ways to improve my skills and expand what I can do.",
+  "Outside of technology, I spend a my time creating art and playing guitar. In general, I enjoy learning and improving, whether that means developing better software, exploring new tools, or growing creatively through music and art.",
 ];
 
 export default function AboutPage() {
@@ -32,8 +32,8 @@ export default function AboutPage() {
       <main className="mx-auto flex w-full max-w-xl flex-col gap-5 rounded-[40px] border border-white/5 bg-[#111315] p-5 font-sans shadow-[0_40px_120px_rgba(0,0,0,0.55)] sm:p-8">
         <HeaderNav className="-mx-1 sm:-mx-4" />
         <AboutIntroSection
-          title="It's Me Brian"
-          description="I'm Brian Do, a product designer with over 5 years of experience, currently residing in Jakarta, Indonesia. I have a deep passion for crafting purposeful interfaces and products. My main goal is to bridge the divide between people and technology, transforming intricate challenges into meaningful and seamless experiences."
+          title="It's Me Joaquin"
+          description="I’m a software developer with previous professional experience working in the U.S. I’m especially interested in building technically challenging and meaningful products, and I’m always looking to learn and improve my skills across different areas of technology."
         />
         <AboutPortraitSection
           imageSrc="/images/about-image.jpg"

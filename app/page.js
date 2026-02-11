@@ -63,10 +63,10 @@ export default function Home() {
       <main className="mx-auto flex w-full max-w-xl flex-col gap-5 rounded-[40px] border border-white/5 bg-[#111315] p-5 font-sans shadow-[0_40px_120px_rgba(0,0,0,0.55)] sm:p-8">
         <HeaderNav className="-mx-1 sm:-mx-4" />
         <HeroSection
-          label="Product Designer"
-          status="Available for work"
-          title="I'm Brian Do"
-          description="Product designer from Jakarta, ID. Currently designing at Rectangle."
+          label="Software Developer"
+          status="Available"
+          title="Joaquin Mancheno"
+          description="Software developer with a B.S. in Software Engineering, a B.A. in Computing in the Arts, an M.S. in Data Science, and a  minor in CIS. Primarily focused on software development roles, but also open to data science, IT, and related technical areas."
           primaryCta="Hire Me"
           secondaryCta="Copy Email"
         />
