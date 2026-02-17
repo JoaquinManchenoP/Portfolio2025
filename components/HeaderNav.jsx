@@ -70,12 +70,14 @@ export default function HeaderNav({ className = "" }) {
             );
           })}
         </div>
-        <button
-          type="button"
+        <a
+          href={
+            "https://www.dropbox.com/scl/fi/cmtzobpy3u1qgrcslk3nx/CV-Feb-2026-PDF.pdf?rlkey=1gyno6b8rj3d6s9frxtyegaqy&e=1&st=6yarlcb7&dl=1"
+          }
           className="flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-lg shadow-black/30 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white text-black/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/70 active:scale-95"
         >
           Download CV
-        </button>
+        </a>
       </div>
     </header>
   );

@@ -4,13 +4,9 @@ export default function ProductsSection({ items }) {
       <div className="flex items-center justify-between border-b border-white/5 px-6 py-4">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-white/50">
-            Projects
+            Software Projects
           </p>
-          <p className="text-xs text-white/50">Framer templates</p>
         </div>
-        <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-white/60">
-          Shop
-        </span>
       </div>
       <div className="space-y-3 p-4 sm:p-6">
         {items.map((product) => (
@@ -31,9 +27,6 @@ export default function ProductsSection({ items }) {
                 </div>
               </div>
             </a>
-            <span className="rounded-2xl border border-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-white/70 transition-colors duration-300 group-hover:border-white/70 group-hover:text-white">
-              Framer Template
-            </span>
           </article>
         ))}
       </div>

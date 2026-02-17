@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ProjectsSection({
   title,
   subtitle,
@@ -21,9 +23,10 @@ export default function ProjectsSection({
       </div>
       <div className="space-y-3 p-4 sm:p-6">
         {items.map((item) => (
-          <article
-            key={item.name}
+          <a
+            href={item.companyLink}
             className="group flex items-center justify-between rounded-2xl border border-white/5 bg-black/20 px-4 py-4 transition-all duration-300 hover:-translate-y-1 hover:border-white/50 hover:bg-black/40"
+            key={item.name}
           >
             <div className="flex items-center gap-3">
               <div
@@ -39,7 +42,7 @@ export default function ProjectsSection({
             <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 text-white/70 transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
-          </article>
+          </a>
         ))}
       </div>
     </section>

@@ -1,3 +1,7 @@
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 export default function HeroSection({
   label,
   status,
@@ -6,6 +10,12 @@ export default function HeroSection({
   primaryCta,
   secondaryCta,
 }) {
+  const [copied, setCopied] = useState(false);
+  const router = useRouter();
+  const pesonalEmail = "jj.mancheno@gmail.com";
+  const emailSubject = "Position inquiry";
+  const contactRef = `mailto:${pesonalEmail}?subject=${encodeURIComponent(emailSubject)}`;
+
   return (
     <section className="group rounded-3xl border border-white/5 bg-white/[0.04] p-6 -mx-1 sm:-mx-4 transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
@@ -25,11 +35,22 @@ export default function HeroSection({
             <p className="mt-3 text-sm text-white/70">{description}</p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm">
-            <button className="flex-1 min-w-[120px] rounded-2xl bg-white px-5 py-3 font-semibold text-black shadow-lg shadow-black/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white active:scale-95">
+            <button
+              onClick={() => router.push(contactRef)}
+              className="flex-1 min-w-[120px] rounded-2xl bg-white px-5 py-3 font-semibold text-black shadow-lg shadow-black/40 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white active:scale-95"
+            >
               {primaryCta}
             </button>
-            <button className="flex-1 min-w-[120px] rounded-2xl border border-white/20 px-5 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/60 hover:text-white active:scale-95">
-              {secondaryCta}
+
+            <button
+              onClick={async () => {
+                await navigator.clipboard.writeText(pesonalEmail);
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }}
+              className="flex-1 min-w-[120px] rounded-2xl border border-white/20 px-5 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/60 hover:text-white active:scale-95"
+            >
+              {copied ? "Copied!" : secondaryCta}
             </button>
           </div>
         </div>

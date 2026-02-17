@@ -1,7 +1,6 @@
 import HeaderNav from "@/components/HeaderNav";
 import HeroSection from "@/components/sections/HeroSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
-import ProductsSection from "@/components/sections/ProductsSection";
 import CtaSection from "@/components/sections/CtaSection";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -11,49 +10,28 @@ const experience = [
     description: "Software Consultant",
     icon: "C",
     colors: "from-[#615CF9] via-[#8577ff] to-[#b0a7ff]",
-  },
-  {
-    name: "Dubow Textile",
-    description: "Software Engineer",
-    icon: "D",
-    colors: "from-[#4F34FF] via-[#7D63FF] to-[#C6A6FF]",
+    companyLink: "https://capmation.com/",
   },
   {
     name: "Mednet Solutions",
     description: "Software Engineer",
     icon: "M",
     colors: "from-[#FF875E] via-[#FFB464] to-[#FFE989]",
-  },
-];
-
-const softwareProjects = [
-  {
-    name: "Video Game Store",
-    description: "Showcase your work beautifully",
-    icon: "V",
-    colors: "from-[#dfe4ff] to-[#9fb3ff]",
-    link: "https://videogamestore-next-2i28o9dsg-joaquinmanchenop.vercel.app/",
+    companyLink: "https://www.mednetsolutions.com/",
   },
   {
-    name: "Music & Movie blog",
-    description: "Modern finance template",
-    icon: "F",
-    colors: "from-[#ffdede] to-[#ff9494]",
-    link: "https://music-blog-zee9u6npn.vercel.app/",
+    name: "Dubow Textile",
+    description: "Software Engineer",
+    icon: "D",
+    colors: "from-[#4F34FF] via-[#7D63FF] to-[#C6A6FF]",
+    companyLink: "https://dubowtextile.com/",
   },
   {
-    name: "Movie Watch List",
-    description: "Dark portfolio for agencies",
-    icon: "G",
-    colors: "from-[#dbe9ff] to-[#87a7ff]",
-    link: "https://react-movie-app-f0d0c.web.app/?",
-  },
-  {
-    name: "Client Prtfolio",
-    description: "Minimal case study layout",
-    icon: "S",
-    colors: "from-[#f4f4f4] to-[#c1c1c1]",
-    link: "https://edu-portfolio-pi.vercel.app/",
+    name: "Metrosolutions S.A.",
+    description: "IT technician",
+    icon: "D",
+    colors: "from-[#4F34FF] via-[#7D63FF] to-[#C6A6FF]",
+    companyLink: "",
   },
 ];
 
@@ -67,7 +45,7 @@ export default function Home() {
           status="Available"
           title="Joaquin Mancheno"
           description="Software developer with a B.S. in Software Engineering, a B.A. in Computing in the Arts, an M.S. in Data Science, and a  minor in CIS. Primarily focused on software development roles, but also open to data science, IT, and related technical areas."
-          primaryCta="Hire Me"
+          primaryCta="Contact Me"
           secondaryCta="Copy Email"
         />
         <ProjectsSection
@@ -76,14 +54,12 @@ export default function Home() {
           actionLabel="View All"
           items={experience}
         />
-        <ProductsSection items={softwareProjects} />
         <CtaSection
           title="Let's work together."
-          description="Creating user experience and visually appealing design."
-          primaryLabel="Hire Me"
+          description=""
+          primaryLabel="Contact me"
           secondaryLabel="Copy Email"
         />
-        <FooterSection />
       </main>
     </div>
   );

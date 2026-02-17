@@ -2,28 +2,12 @@ import HeaderNav from "@/components/HeaderNav";
 import AboutIntroSection from "@/components/about/AboutIntroSection";
 import AboutPortraitSection from "@/components/about/AboutPortraitSection";
 import AboutStorySection from "@/components/about/AboutStorySection";
-import SideProjectsSection from "@/components/about/SideProjectsSection";
 import CtaSection from "@/components/sections/CtaSection";
 import FooterSection from "@/components/sections/FooterSection";
 
-const sideProjects = [
-  {
-    name: "Goven",
-    tag: "Framer Template",
-  },
-  {
-    name: "Upshift",
-    tag: "Web Design Collections",
-  },
-  {
-    name: "Subtle Folio",
-    tag: "Framer Template",
-  },
-];
-
 const storyParagraphs = [
-  "I’m Joaquin, a software developer with a long-standing interest in technology and how it can be used to build and create new things. I enjoy staying up to date with the latest trends and news in tech, and I’m always looking for ways to improve my skills and expand what I can do.",
-  "Outside of technology, I spend a my time creating art and playing guitar. In general, I enjoy learning and improving, whether that means developing better software, exploring new tools, or growing creatively through music and art.",
+  "I have a life long interest in technology and how it can be used to build and create new things. I enjoy staying up to date with the latest trends and news in tech, and I’m always looking for ways to improve my skills and expand what I can do.",
+  "Outside of technology, I spend a my time creating art, playing guitar. In general, I enjoy learning and improving, whether that means developing software, exploring new tools, improving my language skills, or growing creatively through music and art.",
 ];
 
 export default function AboutPage() {
@@ -40,16 +24,12 @@ export default function AboutPage() {
           alt="Portrait of Brian Do"
         />
         <AboutStorySection paragraphs={storyParagraphs} />
-
-        <SideProjectsSection projects={sideProjects} />
-
         <CtaSection
           title="Let's work together."
-          description="Creating user experience and visually appealing design."
+          description=""
           primaryLabel="Hire Me"
           secondaryLabel="Copy Email"
         />
-        <FooterSection />
       </main>
     </div>
   );
